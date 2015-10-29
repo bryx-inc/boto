@@ -847,7 +847,7 @@ class MTurkConnection(AWSQueryConnection):
         if '<Errors>' not in body:
             rs = ResultSet(marker_elems)
             h = handler.XmlHandler(rs, self)
-            xml.sax.parseString(body, h)
+            xml.sax.parseString(bytes(body, 'UTF-8'), h)
             return rs
         else:
             raise MTurkRequestError(response.status, response.reason, body)
