@@ -1,6 +1,12 @@
 ####
 boto
 ####
+boto 2.38.1
+
+Released: 29-Oct-2015
+  
+Mechanical turk works on python3
+
 boto 2.38.0
 
 Released: 9-Apr-2015

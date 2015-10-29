@@ -841,7 +841,7 @@ class MTurkConnection(AWSQueryConnection):
         """
         Helper to process the xml response from AWS
         """
-        body = response.read()
+        body = response.read().decode()
         if self.debug == 2:
             print(body)
         if '<Errors>' not in body:
